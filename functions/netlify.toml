@@ -1,0 +1,19 @@
+[build]
+command = "npm run build"
+publish = "../build"
+edge_functions = "src/edge"
+
+[dev]
+targetPort = 5178
+command = "npm run dev"
+framework = "#custom"
+publish = "../build"
+port = 8888
+
+[functions]
+directory = "src"
+
+[[edge_functions]]
+path = "/fetch"
+function = "ollo"
+
